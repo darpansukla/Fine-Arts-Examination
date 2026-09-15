@@ -156,6 +156,11 @@
             font-size: 14px;
         }
 
+        /* Highlight Dates in Red */
+        .highlight-date {
+            color: var(--accent-red) !important;
+        }
+
         /* Scrolling Announcement Bar */
         .marquee-container {
             background: linear-gradient(135deg, rgba(0, 113, 227, 0.15) 0%, rgba(16, 185, 129, 0.12) 100%);
@@ -331,10 +336,10 @@
             <p>Access your examination portal below</p>
         </header>
 
-        <!-- Scrolling Announcement Bar (Moved below header for clean mobile flow) -->
+        <!-- Scrolling Announcement Bar -->
         <div class="marquee-container">
             <div class="marquee-text">
-                First Form Fill-up: <strong>1st Jan, 2027 – 31st Jan, 2027</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Theory Exam Date: <strong>10th January, 2027</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Practical Exam Date: <strong>April Last Week or May 1st Week</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Result & Marksheet Distribution: <strong>August 2nd or 3rd Week</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Certificate Distribution: <strong>November, 2028</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Venue: <strong>South Point School, Guwahati</strong>
+                First Form Fill-up: <strong class="highlight-date">1st Jan, 2027 – 31st Jan, 2027</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Theory Exam Date: <strong class="highlight-date">10th January, 2027</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Practical Exam Date: <strong class="highlight-date">April Last Week or May 1st Week</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Result & Marksheet Distribution: <strong class="highlight-date">August 2nd or 3rd Week</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Certificate Distribution: <strong class="highlight-date">November, 2028</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Venue: <strong>South Point School, Guwahati</strong>
             </div>
         </div>
 
@@ -343,27 +348,27 @@
             <h2>Welcome to Fine Arts Examination FormFillup Portal</h2>
             <p>Please review the details below and watch the tutorial video before filling out your examination form.</p>
             
-            <!-- Exam Schedule Details Box (Stacked for clean mobile readability) -->
+            <!-- Exam Schedule Details Box -->
             <div class="exam-details-box">
                 <div class="detail-row">
                     <span class="detail-label">First Form Fill-up Dates</span>
-                    <span class="detail-value">1st Jan, 2027 – 31st Jan, 2027</span>
+                    <span class="detail-value highlight-date">1st Jan, 2027 – 31st Jan, 2027</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Theory Exam Date</span>
-                    <span class="detail-value">10th January, 2027</span>
+                    <span class="detail-value highlight-date">10th January, 2027</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Practical Exam Date</span>
-                    <span class="detail-value">April Last Week or May 1st Week</span>
+                    <span class="detail-value highlight-date">April Last Week or May 1st Week</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Result & Marksheet Distribution</span>
-                    <span class="detail-value">August 2nd or 3rd Week</span>
+                    <span class="detail-value highlight-date">August 2nd or 3rd Week</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Certificate Distribution</span>
-                    <span class="detail-value">November, 2028</span>
+                    <span class="detail-value highlight-date">November, 2028</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Reporting Time</span>
