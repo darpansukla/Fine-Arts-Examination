@@ -38,16 +38,16 @@
         /* Vibrant Liquid Ambient Glow Backgrounds */
         .ambient-glow {
             position: fixed;
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 350px;
             border-radius: 50%;
-            filter: blur(100px);
+            filter: blur(90px);
             z-index: 0;
-            opacity: 0.45;
+            opacity: 0.4;
             pointer-events: none;
         }
-        .glow-1 { top: -120px; left: -100px; background: rgba(0, 113, 227, 0.25); }
-        .glow-2 { bottom: -120px; right: -100px; background: rgba(16, 185, 129, 0.25); }
+        .glow-1 { top: -100px; left: -80px; background: rgba(0, 113, 227, 0.25); }
+        .glow-2 { bottom: -100px; right: -80px; background: rgba(16, 185, 129, 0.25); }
 
         /* Full-Width Liquid Layout Container */
         .page-container {
@@ -55,11 +55,105 @@
             width: 100%;
             max-width: 680px;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 24px 16px 40px 16px;
             z-index: 1;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 18px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #0071e3 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        header p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        /* Welcome Message Card */
+        .welcome-card {
+            background: linear-gradient(135deg, rgba(0, 113, 227, 0.12) 0%, rgba(16, 185, 129, 0.08) 100%);
+            border: 1px solid rgba(0, 113, 227, 0.25);
+            border-radius: 24px;
+            padding: 20px 18px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 8px 25px rgba(0, 113, 227, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .welcome-card h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.2px;
+            line-height: 1.3;
+        }
+
+        .welcome-card p {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        /* Exam Schedule Details Box - Optimized for Mobile */
+        .exam-details-box {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 113, 227, 0.2);
+            border-radius: 16px;
+            padding: 14px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .detail-row {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 8px;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .detail-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .detail-value {
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 14px;
         }
 
         /* Scrolling Announcement Bar */
@@ -67,7 +161,7 @@
             background: linear-gradient(135deg, rgba(0, 113, 227, 0.15) 0%, rgba(16, 185, 129, 0.12) 100%);
             border: 1px solid rgba(0, 113, 227, 0.3);
             border-radius: 16px;
-            padding: 12px 16px;
+            padding: 12px 14px;
             overflow: hidden;
             white-space: nowrap;
             display: flex;
@@ -80,7 +174,7 @@
         .marquee-text {
             display: inline-block;
             animation: marquee 35s linear infinite;
-            font-size: 14px;
+            font-size: 13.5px;
             font-weight: 600;
             color: var(--text-primary);
             width: 100%;
@@ -91,125 +185,43 @@
             100% { transform: translateX(-100%); }
         }
 
-        /* Header Section */
-        header {
-            text-align: center;
-            margin-top: 5px;
-            margin-bottom: 2px;
-        }
-
-        header h1 {
-            font-size: 30px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #0071e3 0%, #10b981 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.2;
-        }
-
-        header p {
-            font-size: 15px;
-            color: var(--text-secondary);
-            margin-top: 6px;
-            font-weight: 500;
-        }
-
-        /* Welcome Message Card */
-        .welcome-card {
-            background: linear-gradient(135deg, rgba(0, 113, 227, 0.12) 0%, rgba(16, 185, 129, 0.08) 100%);
-            border: 1px solid rgba(0, 113, 227, 0.25);
-            border-radius: 24px;
-            padding: 20px 24px;
-            text-align: center;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 8px 25px rgba(0, 113, 227, 0.08);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .welcome-card h2 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -0.2px;
-        }
-
-        .welcome-card p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.4;
-            font-weight: 500;
-        }
-
-        /* Exam Schedule Details Box */
-        .exam-details-box {
-            background: rgba(255, 255, 255, 0.75);
-            border: 1px solid rgba(0, 113, 227, 0.2);
-            border-radius: 16px;
-            padding: 14px 16px;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            font-size: 13.5px;
-            color: var(--text-primary);
-        }
-
-        .exam-details-box div {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-        }
-
-        .exam-details-box span {
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-
-        /* Glassmorphism Cards with Colorful Accents */
+        /* Glassmorphism Card for Actions */
         .glass-card {
             background: var(--card-bg);
             backdrop-filter: blur(30px);
             -webkit-backdrop-filter: blur(30px);
             border: 1px solid var(--card-border);
-            border-radius: 28px;
-            padding: 24px;
+            border-radius: 24px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 18px;
-            transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.25s ease;
+            gap: 16px;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
-        }
-
-        .glass-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 18px 45px rgba(0, 113, 227, 0.12);
         }
 
         .card-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 10px;
         }
 
         .card-title {
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 700;
             letter-spacing: -0.3px;
             color: var(--text-primary);
+            line-height: 1.3;
         }
 
         .badge {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 14px;
+            padding: 5px 10px;
+            border-radius: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .badge-existing {
@@ -218,11 +230,11 @@
             border: 1px solid rgba(0, 113, 227, 0.3);
         }
 
-        /* High-Impact Action Buttons (Call-to-Action) */
+        /* High-Impact Action Buttons */
         .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .apple-btn {
@@ -231,16 +243,15 @@
             justify-content: center;
             gap: 10px;
             width: 100%;
-            padding: 16px 20px;
-            border-radius: 16px;
-            font-size: 16px;
+            padding: 15px 20px;
+            border-radius: 14px;
+            font-size: 15px;
             font-weight: 700;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+            transition: all 0.2s ease;
         }
 
-        /* Vibrant Call-to-Action Primary Buttons */
         .btn-primary-existing {
             background: linear-gradient(135deg, #0071e3 0%, #005bb5 100%);
             color: #ffffff;
@@ -274,26 +285,34 @@
         /* Footer Section */
         footer {
             text-align: center;
-            padding: 20px;
-            font-size: 12px;
+            padding: 18px;
+            font-size: 11.5px;
             color: var(--text-secondary);
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-top: 1px solid var(--card-border);
             z-index: 2;
-            letter-spacing: -0.1px;
             margin-top: auto;
             font-weight: 600;
         }
 
-        /* Responsive Breakpoints */
+        /* Larger Screen Adjustments */
         @media (min-width: 768px) {
             .page-container {
-                padding: 50px 20px;
+                padding: 40px 20px;
             }
             header h1 {
-                font-size: 36px;
+                font-size: 34px;
+            }
+            .exam-details-box {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .detail-row {
+                border-bottom: none;
+                padding-bottom: 0;
             }
         }
     </style>
@@ -307,32 +326,53 @@
     <!-- Main Liquid Container -->
     <div class="page-container">
         
-        <!-- Scrolling Announcement Bar -->
+        <header>
+            <h1>Fine Arts Examination</h1>
+            <p>Access your examination portal below</p>
+        </header>
+
+        <!-- Scrolling Announcement Bar (Moved below header for clean mobile flow) -->
         <div class="marquee-container">
             <div class="marquee-text">
                 First Form Fill-up: <strong>1st Jan, 2027 – 31st Jan, 2027</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Theory Exam Date: <strong>10th January, 2027</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Practical Exam Date: <strong>April Last Week or May 1st Week</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Result & Marksheet Distribution: <strong>August 2nd or 3rd Week</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Certificate Distribution: <strong>November, 2028</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Venue: <strong>South Point School, Guwahati</strong>
             </div>
         </div>
 
-        <header>
-            <h1>Fine Arts Examination</h1>
-            <p>Access your examination portal below</p>
-        </header>
-
         <!-- Welcome Message Section -->
         <div class="welcome-card">
             <h2>Welcome to Fine Arts Examination FormFillup Portal</h2>
             <p>Please review the details below and watch the tutorial video before filling out your examination form.</p>
             
-            <!-- Exam Schedule Details Box -->
+            <!-- Exam Schedule Details Box (Stacked for clean mobile readability) -->
             <div class="exam-details-box">
-                <div><span>First Form Fill-up Dates:</span> 1st Jan, 2027 – 31st Jan, 2027</div>
-                <div><span>Theory Exam Date:</span> 10th January, 2027</div>
-                <div><span>Practical Exam Date:</span> April Last Week or May 1st Week</div>
-                <div><span>Result & Marksheet Distribution:</span> August 2nd or 3rd Week</div>
-                <div><span>Certificate Distribution:</span> November, 2028</div>
-                <div><span>Reporting Time:</span> 08:30 am Sunday</div>
-                <div><span>Venue:</span> South Point School, Guwahati</div>
+                <div class="detail-row">
+                    <span class="detail-label">First Form Fill-up Dates</span>
+                    <span class="detail-value">1st Jan, 2027 – 31st Jan, 2027</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Theory Exam Date</span>
+                    <span class="detail-value">10th January, 2027</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Practical Exam Date</span>
+                    <span class="detail-value">April Last Week or May 1st Week</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Result & Marksheet Distribution</span>
+                    <span class="detail-value">August 2nd or 3rd Week</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Certificate Distribution</span>
+                    <span class="detail-value">November, 2028</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Reporting Time</span>
+                    <span class="detail-value">08:30 am Sunday</span>
+                </div>
+                <div class="detail-row" style="grid-column: span 2;">
+                    <span class="detail-label">Venue</span>
+                    <span class="detail-value">South Point School, Guwahati</span>
+                </div>
             </div>
         </div>
 
