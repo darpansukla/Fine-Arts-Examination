@@ -187,7 +187,7 @@
             text-align: center;
         }
 
-        /* Fullscreen Video Overlay */
+        /* Landscape Fullscreen Video Overlay */
         #video-fullscreen-overlay {
             position: fixed;
             top: 0;
@@ -214,7 +214,7 @@
             width: 100%;
             height: 100%;
             border: none;
-            pointer-events: none; /* Blocks user touches/clicks entirely */
+            pointer-events: none; /* Blocks user interactions completely */
         }
 
         .video-shield {
@@ -347,9 +347,10 @@
 
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('youtube-player', {
-                videoId: 'd95PPykB2vE',
+                videoId: 'DJFs3yAj-1U', // Current Video ID
                 playerVars: {
-                    'autoplay': 0,
+                    'autoplay': 1,
+                    'mute': 1,           // Required for mobile browsers to autoplay successfully
                     'controls': 0,
                     'disablekb': 1,
                     'modestbranding': 1,
@@ -358,9 +359,15 @@
                     'iv_load_policy': 3
                 },
                 events: {
+                    'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
                 }
             });
+        }
+
+        function onPlayerReady(event) {
+            // Unmute automatically once the player has started to allow sound if desired
+            event.target.playVideo();
         }
 
         // Tap anywhere on popup to start video, trigger fullscreen, and lock to landscape mode
@@ -369,6 +376,7 @@
             videoOverlay.style.display = 'flex';
 
             if (player && typeof player.playVideo === 'function') {
+                player.unMute(); // Unmute sound on user interaction
                 player.seekTo(0);
                 player.playVideo();
             }
